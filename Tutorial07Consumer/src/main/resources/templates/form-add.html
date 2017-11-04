@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Add student</title>
+<link rel = "stylesheet" href ="/css/bootstrap.min.css"></link>
+<style>body{padding:0vw 0.5vw 0 0.5vw}.navbar{border-radius:0 0 5px 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<div th:replace = "fragments/fragment :: header" ></div> 
+	<h1 class="page-header">Edit</h1>
+	
+	<form action="/student/add/submit" method="get">
+		<div>
+			<label for="npm">NPM</label> <input type="text" name="npm" />
+		</div>
+		<div>
+			<label for="name">Name</label> <input type="text" name="name" />
+		</div>
+		<div>
+			<label for="gpa">GPA</label> <input type="text" name="gpa" />
+		</div>
+
+		<div>
+			<button type="submit" name="action" value="save">Save</button>
+		</div>
+	</form>
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+

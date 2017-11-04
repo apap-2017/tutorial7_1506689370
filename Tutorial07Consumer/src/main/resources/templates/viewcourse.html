@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View Course By ID</title>
+        <link rel = "stylesheet" href ="/css/bootstrap.min.css"></link>
+        <style>body{padding:0vw 0.5vw 0 0.5vw}.navbar{border-radius:0 0 5px 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}</style>
+    </head>
+    <body>
+    	<div th:replace = "fragments/fragment :: header" ></div> 
+       	<h3 th:text="'ID = ' + ${course.idCourse}">Course ID</h3>
+       	<h3 th:text="'Nama = ' + ${course.name}">Course Name</h3>
+       	<h3 th:text="'SKS = ' + ${course.credits}">Course Credits</h3>
+    	<h3>Mahasiswa yang mengambil</h3>
+    	<ul th:each="student,iterationStatus: ${course.students}">
+    		<li th:text="${student.npm} + '-' + ${student.name}">
+    			NPM-Nama
+    		</li>
+    	</ul>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
